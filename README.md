@@ -1,10 +1,21 @@
-# Nawaz Hacker API
 
-Baby AI API powered by Nawaz Boss.
+# Baby AI API (Gemini-Powered)
 
-## How to Deploy
-1. Upload to GitHub
-2. Connect GitHub to Render
-3. Set environment variable: `API_KEY=nawaz-hacker`
+### Features
+- Multilingual Smart Replies (Hindi, English, Urdu)
+- +baby on / +baby off toggle
+- Auto language detection
+- Gemini API based response
 
-Enjoy your Hercai-style AI!
+### Setup Guide (GitHub + Render)
+1. Upload files to GitHub (create new repo)
+2. Add `.env` file with your Gemini API key
+3. Go to [https://render.com](https://render.com)
+4. Click "New Web Service" → Connect your GitHub repo
+5. Use these settings:
+   - Environment: Node
+   - Start command: `npm start`
+   - Add environment variable: `GEMINI_API_KEY`
+
+API is ready at: `https://your-app-name.onrender.com/baby`
+Send POST request with `{ "message": "Hello", "sender": "User" }`
